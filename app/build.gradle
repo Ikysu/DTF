@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'su.iky.dtf'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "su.iky.dtf"
         minSdk 29
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -67,4 +67,8 @@ dependencies {
     androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
     debugImplementation 'androidx.compose.ui:ui-tooling'
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
+
+    implementation "androidx.compose.compiler:compiler:1.5.3"
+    implementation "androidx.compose.runtime:runtime:1.5.2"
+    implementation "androidx.compose.runtime:runtime-livedata:1.5.2"
 }
