@@ -12,6 +12,8 @@ data class Entry (
     @SerializedName("theme") val theme: Theme,
     @SerializedName("title") val title: String,
     @SerializedName("media") val media: Media,
+    @SerializedName("isBlur") val isBlur: Boolean,
+    @SerializedName("counters") val counters: Counters
 )
 
 data class Author (
@@ -27,4 +29,10 @@ data class Media (
     @SerializedName("preview") val preview: String,
     @SerializedName("url") val url: String,
     @SerializedName("type") val type: String,
+)
+
+data class Counters (
+    @SerializedName("comments") val comments: Int,
+    @SerializedName("favorites") val favorites: Int,
+    @SerializedName("likes") val likes: Int,
 )
