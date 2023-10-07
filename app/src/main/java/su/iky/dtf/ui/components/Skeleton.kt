@@ -28,7 +28,7 @@ import su.iky.dtf.lib.network.pxToDp
 
 @Composable
 fun skeletonBrush(): Brush {
-    val transition = rememberInfiniteTransition(label = " ")
+    val transition = rememberInfiniteTransition()
 
     val translateAnimation by transition.animateFloat(
         initialValue = 0f,
@@ -37,7 +37,6 @@ fun skeletonBrush(): Brush {
             tween(durationMillis = 1500, easing = LinearEasing),
             RepeatMode.Restart
         ),
-        label = " ",
     )
 
     val shimmerColors = listOf(
