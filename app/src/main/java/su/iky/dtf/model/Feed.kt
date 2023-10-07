@@ -8,12 +8,14 @@ data class DTFFeedAPI (
 )
 
 data class Entry (
+    @SerializedName("id") val id: Long,
     @SerializedName("author") val author: Author,
     @SerializedName("theme") val theme: Theme,
     @SerializedName("title") val title: String,
     @SerializedName("media") val media: Media,
     @SerializedName("isBlur") val isBlur: Boolean,
-    @SerializedName("counters") val counters: Counters
+    @SerializedName("counters") val counters: Counters,
+    @SerializedName("subsite") val subsite: Subsite
 )
 
 data class Author (
@@ -29,7 +31,16 @@ data class Media (
     @SerializedName("preview") val preview: String,
     @SerializedName("url") val url: String,
     @SerializedName("type") val type: String,
+    @SerializedName("height") val height: Double,
+    @SerializedName("width") val width: Double,
 )
+
+data class Subsite (
+    @SerializedName("id") val id: Long,
+    @SerializedName("name") val name: String,
+    @SerializedName("url") val url: String,
+)
+
 
 data class Counters (
     @SerializedName("comments") val comments: Int,

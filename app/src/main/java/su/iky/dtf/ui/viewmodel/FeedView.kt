@@ -7,7 +7,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import su.iky.dtf.model.Entry
-import su.iky.dtf.network.getFeed
+import su.iky.dtf.lib.network.getFeed
 
 class FeedView : ViewModel() {
     val liveEntries = MutableLiveData<List<Entry>>()
